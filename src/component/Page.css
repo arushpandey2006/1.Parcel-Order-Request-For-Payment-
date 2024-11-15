@@ -1,0 +1,223 @@
+/* App.css or Page.css */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  padding: 10px;
+  background-color: #212529;
+  background-size: 400px;
+  color: #fff;
+  /* margin: 0 400px 400px 400px ; */
+  width: 1508px;
+
+  height: 780px;
+  border-radius: 10px;
+}
+.text-center{
+  margin: 10px;
+  padding: 10px;
+}
+.table-background {
+  border: rgba(31, 29, 43, 1);
+  background-color: rgba(31, 29, 43, 1); /* Light gray background for the table */
+}
+
+.table-background th {
+  width: 1550px;
+  height: 62px;
+  background-color: rgba(202, 146, 61, 1); /* Blue background for header */
+  color: white; /* White text for header */
+}
+
+.table-background td {
+  text-align: center;
+  background-color: rgba(31, 29, 43, 1); /* White background for table cells */
+  color: rgba(171, 187, 194, 1);
+  font-family: "Barlow", sans-serif;
+
+}
+.table-background th, .table-background td {
+  border: 2px solid rgba(42, 42, 56, 1); /* Change this to your desired border color */
+}
+.table-background td .time{
+  background-color: red;
+}
+.box{
+  margin: 20px;
+  border-radius: 10px 0 0 0;
+}
+.box2{
+  margin: 20px;
+  border-radius: 0 10px 0 0;
+}
+/* .Parcel-Order{
+  padding: 50px;
+
+} */
+p{
+  display: flex;
+  color: red;
+}
+.info {
+  display: flex;
+  gap: 10px;
+  
+}
+
+.label {
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.check-button,
+.cross-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  size: 20px;
+  background-color: #343a40;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Added transitions */
+}
+
+.check-button {
+ 
+  background-color: #28a745;
+}
+span{
+  size: 10px;
+}
+.cross-button {
+  background-color: #dc3545;
+  color: red;
+}
+
+/* Hover effects */
+.check-button:hover {
+  background-color: #218838;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.cross-button:hover {
+  background-color: #c82333;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.check-icon,
+.cross-icon {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Page.css */
+
+.table-background {
+  border-collapse: collapse; /* Ensure borders collapse together */
+}
+
+.table-background th,
+.table-background td {
+  border: none; /* Remove all borders */
+}
+
+.table-background th:first-child,
+.table-background td:first-child,
+.table-background th:last-child,
+.table-background td:last-child {
+  border-left: none; /* Remove left border */
+  border-right: none; /* Remove right border */
+}
+
+.table-background td {
+  text-align: center;
+  background-color: rgba(31, 29, 43, 1);
+  color: rgba(171, 187, 194, 1);
+  border-bottom: 2px solid rgba(42, 42, 56, 1); /* Bottom border for each cell */
+ 
+}
+
+.table-background th {
+  border-bottom: 2px solid rgba(42, 42, 56, 1); /* Bottom border for header cells */
+}
+
+.total-bill-background {
+  position: relative;
+  text-align: center;
+  color: rgba(171, 187, 194, 1);
+  color: #218838;
+  padding: 10px; /* Adds space inside the background */
+}
+
+.total-bill-background::before {
+ 
+  content: '';
+  position: absolute;
+  width: 61px;
+  height: 35px;
+  top: 5px;
+  left: 70px;
+  left: 60px;
+  bottom: 5px;
+  border-radius: 25px;
+  color: white;
+  background-color: rgba(37, 40, 54, 1);
+  z-index: -1;
+}
+.total-bill-background {
+  color: white;
+  z-index: 1; /* Bring text above the inner background */
+  border-bottom: 2px solid rgba(42, 42, 56, 1); /* Bottom border for the cell */
+}
+/* Time  */
+.Time-background {
+  position: relative;
+  text-align: center;
+  color: rgba(171, 187, 194, 1);
+  color: #218838;
+  padding: 10px; /* Adds space inside the background */
+}
+
+.Time-background::before {
+ 
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 33px;
+    top: 5px;
+    left: 70px;
+    left: 45px;
+    bottom: 5px;
+    border-radius: 23px;
+    background-color:rgba(45, 48, 62, 1);
+    z-index: -1;
+}
+.Time-background {
+  z-index: 1; /* Bring text above the inner background */
+  border-bottom: 2px solid rgba(42, 42, 56, 1); /* Bottom border for the cell */
+}
+/* Additional styles for responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info {
+    flex-wrap: wrap;
+  }
+
+  .label {
+    flex-basis: 100%; /* Stack labels on small screens */
+    margin-bottom: 5px;
+  }
+}
